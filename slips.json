@@ -1,0 +1,31 @@
+{
+	"logo":{
+		"image":"logo.jpg",
+		"fit":[130, 50],
+		"align":"center",
+		"valign": "top"
+	},
+	"dateTime":{
+		"text":"18/01/2019      14:43:00",
+		"font":"TTF/mmrCensus.v4.sh.mif.ttf",
+		"fontSize":"10",
+		"align":"center",
+		"width":"130",
+		"valign":"60"
+	},
+	"prepaid":{
+		"text":"LINE Prepaid:300",
+		"font":"TTF/arial-bold.ttf",
+		"fontSize":"10",
+		"align":"left",
+		"valign":"45"
+	},
+	"footer":{
+		"text":"ส่วนท้ายของสลิป สามารถใส่ข้อความโฆษณาได้ในส่วนนี้ add promotion fron here",
+		"font":"TTF/micross.ttf",
+		"fontSize":"8",
+		"align":"center",
+		"width":"130",
+		"valign":"60"
+	}
+}
