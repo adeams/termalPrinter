@@ -12,8 +12,11 @@ var fileObjName = 'rabbitTopUp.json';
 
 fs.readFile(fileObjName, function (err, data) {
 	//console.log(JSON.parse(data));
-	prints.convordSlips(data,function(fn){
+	prints.convordSlips(data,function(fn1){
 		console.log("convordSlips complete");
+		prints.printSlips(fn1,function(fn){
+			console.log("print complete");
+		});	
 	});
 });
 

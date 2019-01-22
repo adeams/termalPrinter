@@ -26,7 +26,12 @@ function convordSlips(data,fn){
 	var dataConvordSlips = [];
 	var tempObj = JSON.parse(JSON.stringify(objTextDefault));
 	console.log(tempObj.font);
-	fn(null);
+	if(obj.Card_Issuer_Name == "RABBIT    "){
+			tempObj.textCons = "Bangkok Smartcard System co.,Ltd";
+			tempObj.fontSize = "8";	
+	}
+	dataConvordSlips.push(tempObj);
+	fn(dataConvordSlips);
 }
 
 function printSlipsfix(data,fn){
@@ -92,7 +97,8 @@ function printSlipsfix(data,fn){
 }
 
 function printSlips(data,fn){
-	var obj = JSON.parse(data);
+	//var obj = JSON.parse(data);
+	var obj = data;
 	//console.log(obj);
 	var doc = new pdf( { size: 'A8', layout : 'portrait' } );
 	var fsp = require('fs');
