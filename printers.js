@@ -10,6 +10,24 @@ var prt = 'Masung-USB2.0_ESP-002-58mm';
 cmdprt += '&& sudo cp lib/gs9.20/gs /usr/bin/ && sudo cancel -a -x && lp -d '+ prt +' ticket.ps -q 100 -s';	
 
 // prtagain += prt +' ticket.ps -q 100 -s';
+var objTextDefault = {
+	type:"text",
+	text:"",
+	textCons:"",
+	font:"TTF/arial-bold.ttf",
+	fontSize:"7",
+	align:"center",
+	valign:""
+}
+
+function convordSlips(data,fn){
+	var obj = JSON.parse(data);
+	console.log(obj);
+	var dataConvordSlips = [];
+	var tempObj = JSON.parse(JSON.stringify(objTextDefault));
+	console.log(tempObj.font);
+	fn(null);
+}
 
 function printSlipsfix(data,fn){
 	var obj = JSON.parse(data);
@@ -75,38 +93,38 @@ function printSlipsfix(data,fn){
 
 function printSlips(data,fn){
 	var obj = JSON.parse(data);
-	//console.log(obj.dataArray);
-	var doc = new pdf( { size: 'A7', layout : 'portrait' } );
+	//console.log(obj);
+	var doc = new pdf( { size: 'A8', layout : 'portrait' } );
 	var fsp = require('fs');
 	var convert =  doc.pipe(fsp.createWriteStream(pdfName));
 
-	for (var index in obj.dataArray)  {
-		console.log(obj.dataArray[index].type);	
+	for (var index in obj)  {
+		console.log(obj[index].type);	
 
-		if(obj.dataArray[index].type == "image"){
+		if(obj[index].type == "image"){
 			// Add an image, constrain it to a given size, and center it vertically and horizontally 
-			doc.image(obj.dataArray[index].image, {
-			   fit: obj.dataArray[index].fit,
-			   align: obj.dataArray[index].align,
-			   valign: obj.dataArray[index].valign
+			doc.image(obj[index].image, {
+			   fit: obj[index].fit,
+			   align: obj[index].align,
+			   valign: obj[index].valign
 			});
 		}
 
-		if(obj.dataArray[index].type == "text"){
+		if(obj[index].type == "text"){
 			//Embed a font, set the font size, and render some text
-			if(obj.dataArray[index].valign != ""){
-				doc.font(obj.dataArray[index].font)
-			   .fontSize(parseInt(obj.dataArray[index].fontSize))
-			   .text(obj.dataArray[index].text,{align:obj.dataArray[index].align,width:obj.dataArray[index].width},parseInt(obj.dataArray[index].valign))
+			if(obj[index].valign != ""){
+				doc.font(obj[index].font)
+			   .fontSize(parseInt(obj[index].fontSize))
+			   .text(obj[index].textCons+obj[index].text,{align:obj[index].align,width:obj[index].width},parseInt(obj[index].valign))
 			 }else{
-			 	doc.font(obj.dataArray[index].font)
-			   .fontSize(parseInt(obj.dataArray[index].fontSize))
-			   .text(obj.dataArray[index].text,{align:obj.dataArray[index].align,width:obj.dataArray[index].width})
+			 	doc.font(obj[index].font)
+			   .fontSize(parseInt(obj[index].fontSize))
+			   .text(obj[index].textCons+obj[index].text,{align:obj[index].align,width:obj[index].width})
 			 }
 		}
 
-		if(obj.dataArray[index].type == "linefeed"){
-			doc.moveDown(parseInt(obj.dataArray[index].width))	
+		if(obj[index].type == "linefeed"){
+			doc.moveDown(parseInt(obj[index].width))	
 		}
 	}
 	//# Finalize PDF file 
@@ -133,6 +151,7 @@ function printSlips(data,fn){
 }
 
 module.exports = {
+	convordSlips: convordSlips,
   printSlips: printSlips,
   printSlipsfix:printSlipsfix
 };

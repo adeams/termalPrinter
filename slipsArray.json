@@ -1,34 +1,5 @@
-{
-	"logo":{
-		"image":"logo.jpg",
-		"fit":[130, 50],
-		"align":"center",
-		"valign": "top"
-	},
-	"dateTime":{
-		"text":"18/01/2019      14:43:00",
-		"font":"TTF/mmrCensus.v4.sh.mif.ttf",
-		"fontSize":"10",
-		"align":"center",
-		"width":"130",
-		"valign":"60"
-	},
-	"prepaid":{
-		"text":"LINE Prepaid:300",
-		"font":"TTF/arial-bold.ttf",
-		"fontSize":"10",
-		"align":"left",
-		"valign":"45"
-	},
-	"footer":{
-		"text":"ส่วนท้ายของสลิป สามารถใส่ข้อความโฆษณาได้ในส่วนนี้ add promotion fron here",
-		"font":"TTF/micross.ttf",
-		"fontSize":"8",
-		"align":"center",
-		"width":"130",
-		"valign":"60"
-	},
-	"dataArray":[
+
+	[
 		{
 			"type":"image",
 			"image":"logo.jpg",
@@ -38,20 +9,129 @@
 		},
 		{
 			"type":"text",
-			"text":"LINE Prepaid:300",
+			"text":"",
+			"textCons":"Bangkok Smartcard System co.,Ltd",
 			"font":"TTF/arial-bold.ttf",
-			"fontSize":"10",
-			"align":"left",
+			"fontSize":"6",
+			"align":"center",
 			"valign":"40"
 		},
 		{
 			"type":"text",
-			"text":"ส่วนท้ายของสลิป สามารถใส่ข้อความโฆษณาได้ในส่วนนี้ add promotion fron here",
-			"font":"TTF/micross.ttf",
-			"fontSize":"8",
+			"text":"",
+			"textCons":"RECEIPT",
+			"font":"TTF/arial-bold.ttf",
+			"fontSize":"7",
 			"align":"center",
-			"width":"130",
 			"valign":""
+		},
+		{
+			"type":"text",
+			"text":"0105552012126",
+			"textCons":"TAX ID:",
+			"font":"TTF/arial-bold.ttf",
+			"fontSize":"6",
+			"align":"center",
+			"valign":""
+		},
+		{
+			"type":"text",
+			"text":"",
+			"textCons":"....................................................................................",
+			"font":"TTF/arial-bold.ttf",
+			"fontSize":"6",
+			"align":"left",
+			"valign":""
+		},
+		{
+			"type":"text",
+			"text":"A143E_20190118_192444",
+			"textCons":"RECEIPT NO.  :  ",
+			"font":"TTF/arial-bold.ttf",
+			"fontSize":"6",
+			"align":"left",
+			"valign":""
+		},
+		{
+			"type":"text",
+			"text":"0006410",
+			"textCons":"TRACE NO.     :  ",
+			"font":"TTF/arial-bold.ttf",
+			"fontSize":"6",
+			"align":"left",
+			"valign":""
+		},
+		{
+			"type":"text",
+			"text":"0001",
+			"textCons":"KIOSK ID         :  ",
+			"font":"TTF/arial-bold.ttf",
+			"fontSize":"6",
+			"align":"left",
+			"valign":""
+		},
+		{
+			"type":"text",
+			"text":"TST",
+			"textCons":"LOCATION      :  ",
+			"font":"TTF/arial-bold.ttf",
+			"fontSize":"6",
+			"align":"left",
+			"valign":""
+		},
+		{
+			"type":"text",
+			"text":"22/01/2019 11:34:00",
+			"textCons":"DATE               :  ",
+			"font":"TTF/arial-bold.ttf",
+			"fontSize":"6",
+			"align":"left",
+			"valign":""
+		},
+		{
+			"type":"text",
+			"text":"",
+			"textCons":"....................................................................................",
+			"font":"TTF/arial-bold.ttf",
+			"fontSize":"6",
+			"align":"left",
+			"valign":""
+		},
+		{
+			"type":"text",
+			"text":"088750511213",
+			"textCons":"",
+			"font":"TTF/arial-bold.ttf",
+			"fontSize":"7",
+			"align":"left",
+			"valign":""
+		},
+		{
+			"type":"text",
+			"text":"",
+			"textCons":"Rabbit card",
+			"font":"TTF/arial-bold.ttf",
+			"fontSize":"7",
+			"align":"left",
+			"valign":""
+		},
+		{
+			"type":"text",
+			"text":"",
+			"textCons":"Previous Balance",
+			"font":"TTF/arial-bold.ttf",
+			"fontSize":"7",
+			"align":"left",
+			"valign":"140"
+		},
+		{
+			"type":"text",
+			"text":"76.00 THB     .",
+			"textCons":"",
+			"font":"TTF/arial-bold.ttf",
+			"fontSize":"7",
+			"align":"right",
+			"valign":"140"
 		},
 		{
 			"type":"linefeed",
@@ -59,12 +139,55 @@
 		},
 		{
 			"type":"text",
-			"text":"18/01/2019      14:43:00",
-			"font":"TTF/mmrCensus.v4.sh.mif.ttf",
-			"fontSize":"10",
+			"text":"",
+			"textCons":"TOP UP AMOUNT",
+			"font":"TTF/arial-bold.ttf",
+			"fontSize":"7",
+			"align":"left",
+			"valign":"150"
+		},
+		{
+			"type":"text",
+			"text":"100.00 THB     .",
+			"textCons":"",
+			"font":"TTF/arial-bold.ttf",
+			"fontSize":"7",
+			"align":"right",
+			"valign":"150"
+		},
+		{
+			"type":"linefeed",
+			"width":"1"
+		},
+		{
+			"type":"text",
+			"text":"",
+			"textCons":"Current Balance",
+			"font":"TTF/arial-bold.ttf",
+			"fontSize":"7",
+			"align":"left",
+			"valign":"160"
+		},
+		{
+			"type":"text",
+			"text":"176.00 THB     .",
+			"textCons":"",
+			"font":"TTF/arial-bold.ttf",
+			"fontSize":"7",
+			"align":"right",
+			"valign":"160"
+		},
+		{
+			"type":"linefeed",
+			"width":"1"
+		},
+		{
+			"type":"text",
+			"text":"",
+			"textCons":"--- THANK YOU ---",
+			"font":"TTF/arial-bold.ttf",
+			"fontSize":"8",
 			"align":"center",
-			"width":"130",
 			"valign":""
 		}
 	]
-}
